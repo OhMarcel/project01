@@ -7,16 +7,18 @@ function playGame(){
     let rounds = prompt("How many rounds would you like to play of ROCK/PAPER/SCISSORS ? :"); 
     let roundsNum = parseInt(rounds);
     for(let i = 0; i < roundsNum; i++){
+        playRound(getHumanChoice(), getComputerChoice());
         
-        
-        if((humanScore >= Math.round(roundsNum/2) && humanScore>=computerScore)||(computerScore >= Math.round(roundsNum/2) && computerScore>=humanScore)){
-            if(humanScore > computerScore){
-                console.log("You win");
-            }
-            if(computerScore > humanScore){
-                console.log("You Lose");
-            }
+    }
+    if(humanScore>=computerScore||computerScore>=humanScore){
+        if(humanScore > computerScore){
+            return "You Win";
         }
+        if(computerScore > humanScore){
+            return "You Lose";
+        }
+    } else{
+        return"No one wins";
     }
 
 }
