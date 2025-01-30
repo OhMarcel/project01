@@ -17,3 +17,7 @@ function getComputerChoice(){
     }
     return "";
 }
+function getHumanChoice(){
+    let userChoice = prompt("Choose to Play: Rock/Paper/Scissors : ");
+    console.log(userChoice);
+}
